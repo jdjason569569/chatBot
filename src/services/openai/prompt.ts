@@ -1,30 +1,30 @@
-import fetch from 'node-fetch';
+// import fetch from 'node-fetch';
 
-const apiUrl = 'http://localhost:3000/api/statistics/usertime';
+// const apiUrl = 'http://localhost:3000/api/statistics/usertime';
 
-let DATE_BASE = undefined;
+ let DATE_BASE = 'holamundo';
 
-fetch(apiUrl)
-  .then(response => {
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-    return response.json();
-  })
-  .then((data: []) => {
-    if (data) {
+// fetch(apiUrl)
+//   .then(response => {
+//     if (!response.ok) {
+//       throw new Error(`HTTP error! Status: ${response.status}`);
+//     }
+//     return response.json();
+//   })
+//   .then((data: []) => {
+//     if (data) {
         
-        let result = data.map((value: any) =>{
-           return  `${value.name}: ${value.cantidad_turnos_completos}`
-        });
-        DATE_BASE = result
+//         let result = data.map((value: any) =>{
+//            return  `${value.name}: ${value.cantidad_turnos_completos}`
+//         });
+//         DATE_BASE = result
 
-        console.log("result ", DATE_BASE);
-    }
-  })
-  .catch(error => {
-    console.error('Error al hacer la solicitud:', error.message);
-  });
+//         console.log("result ", DATE_BASE);
+//     }
+//   })
+//   .catch(error => {
+//     console.error('Error al hacer la solicitud:', error.message);
+//   });
 
 
 const PROMPT = `
