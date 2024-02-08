@@ -30,6 +30,7 @@ FROM builder as deploy
 
 COPY --from=builder /app/dist ./dist
 COPY --from=builder /app/package.json /app/pnpm-lock.yaml ./
+COPY --from=builder /app/node_modules ./node_modules
 
 RUN pnpm install --frozen-lockfile --production
 CMD ["npm", "start"]
