@@ -23,7 +23,8 @@
         "node-fetch": "^3.3.2",
         "openai": "^4.24.1",
         "paypal-rest-sdk": "^1.8.1",
-        "wa-sticker-formatter": "4.3.2"
+        "wa-sticker-formatter": "4.3.2",
+        "tsx": "^3.14.0"
     },
     "author": "",
     "license": "ISC",
