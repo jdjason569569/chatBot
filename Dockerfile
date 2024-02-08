@@ -22,6 +22,7 @@ RUN apk add --no-cache \
       ttf-freefont
 
 COPY . .
+RUN pnpm i tsx
 RUN pnpm i
 RUN pnpm build
 
