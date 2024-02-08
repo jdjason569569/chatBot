@@ -22,8 +22,8 @@ RUN apk add --no-cache \
       ttf-freefont
 
 COPY . .
-RUN pnpm i
-RUN pnpm build
+RUN npm i
+RUN npm build
 
 #Etapa de producción
 FROM builder as deploy
